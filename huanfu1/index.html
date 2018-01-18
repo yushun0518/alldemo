@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>互联网核心技术-千凡</title>
+  <!--css 层叠样式表  衣服 化妆品-->
+  <style type="text/css">
+  *{margin:0;padding:0;}
+  body{
+	background:url("images/bg_pic1.jpg") center top;
+	background-size:cover;
+  }
+  .but{
+	width:100%;/*宽*/
+	height:40px;/*高*/
+	background:rgba(0,0,0,0.5);/*背景颜色*/
+	line-height:40px;/*行高*/
+  }
+  .but span.click{
+	color:#fff;
+	margin-left:230px;
+	cursor:pointer;/*手指形状*/
+  }
+  .pic{
+	width:100%;
+	height:400px;
+	background:#fff;
+	position:fixed;/*固定定位*/
+	left:0;top:0;
+	display:none;
+  }
+  .pic ul{
+	width:1000px;
+	height:300px;
+	margin:50px auto;/*上下 左右居中*/
+  }
+  .pic ul li{
+	list-style:none;/*去掉小圆点*/
+	width:170px;
+	height:107px;
+	border:5px solid #fff;/*粗细 线型  颜色*/
+	float:left;/*左浮动*/
+	margin:10px;
+	box-shadow:2px 2px 7px #666;/*水平方向 垂直方向 边缘模糊 颜色*/
+	position:relative;/*参照物 相对定位*/
+  }
+  .pic ul li span.ioc{
+	display:block;/*块元素显示*/
+	width:18px;
+	height:18px;
+	background:url("images/ioc.png") -180px 0px;
+	position:absolute;/*绝对定位*/
+	bottom:10px;right:10px;
+	display:none;/*隐藏*/
+  }
+   .pic ul li.first span.ioc{display:block;}
+  </style>
+ </head>
+ <body>
+  <div class="but"><span class="click">换肤</span></div>
+  <div class="pic">
+	<ul>
+	<li class="first" datesrc="bg_pic1.jpg">
+		<img src="images/nav_pic1.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic2.jpg">
+		<img src="images/nav_pic2.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic3.jpg">
+		<img src="images/nav_pic3.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic4.jpg">
+		<img src="images/nav_pic4.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic5.jpg">
+		<img src="images/nav_pic5.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic6.jpg">
+		<img src="images/nav_pic6.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic7.jpg">
+		<img src="images/nav_pic7.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic8.jpg">
+		<img src="images/nav_pic8.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic9.jpg">
+		<img src="images/nav_pic9.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+	<li datesrc="bg_pic10.jpg">
+		<img src="images/nav_pic10.jpg" width="170" height="107" alt="" />
+		<span class="ioc"></span>
+	</li>
+</ul>
+  </div>
+  <!--
+	div 盒子模型，有宽度，有高度，放置内容的长方形区域 
+	姓名=“张三”
+	id=""			名字唯一   #
+	class=""		重复性 多个 代码更精简，效率更高 .
+	命名规范
+		1.不能用中文
+		2.以字母开头，数字，下划线，横线
+		3.见名知义
+  -->
+  <script src="js/jquery-2.1.4.js"></script>
+  <script>
+  $(".click").click(function(e){
+	//alert(111)
+	$(".pic").slideDown();
+	e.stopPropagation();
+  })
+  $(".pic").click(function(e){
+	e.stopPropagation();
+  })
+  $(document).click(function(){
+	$(".pic").slideUp()
+  })
+  $(".pic ul li").click(function(){
+		$(this).addClass("first").siblings().removeClass("first");
+		var imgsrc = $(this).attr("datesrc");
+		$("body").css("background","url('images/"+imgsrc+"')")
+  })
+  
+  </script>
+ </body>
+</html>

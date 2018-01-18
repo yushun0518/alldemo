@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>视频播放器</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#video {
+				background: red url(images/vid.jpg);
+				width: 693px;
+				height: 430px;
+				margin: 50px auto;
+				background-size: 100% 100%;
+				padding: 10px;
+			}
+			
+			.content {
+				width: 658px;
+				height: 376px;
+				margin-left: 16px;
+				margin-top: 6px;
+				/*background: blue;*/
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.controls {
+				width: 600px;
+				height: 65px;
+				/*background: blue;*/
+				position: absolute;
+				left: 0;
+				bottom: -43px;
+				transition: 1s;
+			}
+			
+			.controls:hover {
+				bottom: 0;
+			}
+			
+			/*.progress {
+				width: 480px;
+				height: 12px;
+				background: #fff;
+				margin: auto;
+			}*/
+			
+			.icon {
+				width: 380px;
+				height: 48px;
+				margin: auto;
+				margin-top: 10px;
+			}
+			
+			.icon div {
+				width: 33px;
+				height: 33px;
+				background: url("images/1.jpg");
+				float: left;
+				margin-right: 20px;
+				border-radius: 50%;
+			}
+			
+			.icon div.pre {
+				background-position: -111px -8px;
+			}
+			
+			.icon div.play {
+				background-position: -69px -8px;
+			}
+			
+			.icon div.next {
+				background-position: 257px -8px;
+			}
+			
+			.icon div.vol {
+				background-position: -151px 55px;
+			}
+			
+			.icon div.full {
+				background: url(images/qp.png);
+				width: 34px;
+				height: 34px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="video">
+			<div class="content">
+				<video id="myVideo" src="videos/2.mp4" width="660" height="430" poster="images/cc.png"></video>
+				<div class="controls">
+					<div class="progress"></div>
+					<div class="icon">
+						<div class="pre"></div>
+						<div class="play"></div>
+						<div class="next"></div>
+						<div class="vol"></div>
+						<div class="full"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var myVideo = document.getElementById("myVideo");
+			var play = document.getElementsByClassName('play')[0];
+			var pre = document.getElementsByClassName("pre")[0];
+			var next = document.getElementsByClassName("next")[0];
+			var full = document.getElementsByClassName("full")[0];
+			var mark = true;
+				play.onclick = function() {
+					if(mark){
+						myVideo.play();
+						mark = false;
+						this.style.backgroundPosition = "-28px -66px";
+					}else{
+						myVideo.pause();
+						mark = true;
+						this.style.backgroundPosition = "-69px -8px";
+					}
+					
+				}
+				var n = 1;
+				pre.onclick=function(){
+					n--;
+					if(n<1){
+						n=5;
+					}
+					videoPlay();
+					
+				}
+				function videoPlay(){
+					myVideo.src = "videos/"+n+".mp4"
+					myVideo.play();
+					mark = false;
+					this.style.backgroundPosition = "-28px -66px";
+				}
+				next.onclick=function(){
+					n++;
+					if (n>5){
+						 n=1;
+					}
+					videoPlay();
+				}
+				function fullScreen(){
+					myVideo.webkitRequestFullScreen();
+				}
+				full.onclick=function(){
+					fullScreen();
+				}
+				var i = 0;
+				myVideo.onclick=function(){
+					
+					i++;
+					if(i==2){
+						fullScreen();
+						i=0;
+					}
+				}
+		</script>
+	</body>
+
+</html>

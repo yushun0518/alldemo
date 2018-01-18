@@ -1,0 +1,54 @@
+@font-face{
+	font-family:'icons';
+	src:url('fonts/icons.eot');
+	src:url('fonts/icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icons.woff') format('woff'),
+		url('fonts/icons.ttf') format('truetype'),
+		url('fonts/icons.svg#icons') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+.icon-love,.icon-setting,.icon-html5,.icon-broadcast,.icon-laboratory,.icon-tutorial,.icon-forum,.icon-home,.icon-resource,.icon-fe,.icon-reading,.icon-discover{
+	font-family:'icons';
+	speak:none;
+	font-style:normal;
+	font-weight:normal;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	height: 58px;
+	background-position: 19px 15px;
+	background-repeat: no-repeat;
+	-webkit-font-smoothing:antialiased;
+}
+
+/*.icon-love:before{content:"\e000";}
+.icon-discover:before{content:"\e001";}
+.icon-reading:before{content:"\e002";}
+.icon-fe:before{content:"\e003";}
+.icon-resource:before{content:"\e004";}
+.icon-home:before{content:"\e005";}
+.icon-forum:before{content:"\e006";}
+.icon-tutorial:before{content:"\e007";}
+.icon-laboratory:before{content:"\e008";}
+.icon-broadcast:before{content:"\e009";}
+.icon-html5:before{content:"\e010";}
+.icon-setting:before{content:"\e011";}*/
+
+
+.icon-love {background: url(../images/home3.png);}
+.icon-discover {background: url(../images/airplane.png) no-repeat;}
+.icon-reading {background: url(../images/appleinc.png);}
+.icon-fe {background: url(../images/book.png);}
+.icon-resource {background: url(../images/bubbles4.png);}
+.icon-home {background: url(../images/happy.png) no-repeat;}
+.icon-forum {background: url(../images/leaf.png);}
+.icon-tutorial {background: url(../images/headphones.png);}
+.icon-laboratory {background: url(../images/podcast.png);}
+.icon-broadcast {background: url(../images/price-tag.png);}
+.icon-setting {background: url(../images/stopwatch.png);}
+.icon-html5 { background: url(../images/home3.png);}
+.icon-mh {background: url(../images/clubs.png);}
+.icon-filter { background: url(../images/filter.png);}
+.icon-stopwatch { background: url(../images/stopwatch.png);}

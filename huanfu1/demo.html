@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>换肤效果</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: url("images/bg_pic1.jpg") center top;
+				background-size: cover;
+			}
+			
+			.but {
+				width: 100%;
+				/*宽*/
+				height: 40px;
+				/*高*/
+				background: rgba(0, 0, 0, 0.5);
+				/*背景颜色*/
+				line-height: 40px;
+				/*行高*/
+			}
+			
+			.but span.click {
+				color: #fff;
+				margin-left: 230px;
+				cursor: pointer;
+			}
+			
+			.pic {
+				width: 100%;
+				height: 400px;
+				background: #fff;
+				position: fixed;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			
+			.pic ul {
+				width: 1000px;
+				height: 300px;
+				/*background: red;*/
+				margin: 50px auto;
+				/*display: none;*/
+			}
+			
+			.pic ul li {
+				width: 170px;
+				height: 107px;
+				border: 5px solid #fff;
+				list-style: none;
+				float: left;
+				margin: 10px;
+				position: relative;
+				box-shadow: 2px 2px 7px #666;
+			}
+			
+			.pic ul li span.ioc {
+				width: 18px;
+				height: 18px;
+				background: url("images/ioc.png") 80px 50px;
+				/*display: block;*/
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				display: none;
+			}
+			.pic ul li.first span.ioc{
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="but"><span class="click">换肤</span></div>
+		<div class="pic">
+			<ul>
+				<li class="first" datesrc="bg_pic1.jpg">
+					<img src="images/nav_pic1.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic2.jpg">
+					<img src="images/nav_pic2.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic3.jpg">
+					<img src="images/nav_pic3.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic4.jpg">
+					<img src="images/nav_pic4.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic5.jpg">
+					<img src="images/nav_pic5.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic6.jpg">
+					<img src="images/nav_pic6.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic7.jpg">
+					<img src="images/nav_pic7.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic8.jpg">
+					<img src="images/nav_pic8.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic9.jpg">
+					<img src="images/nav_pic9.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+				<li datesrc="bg_pic10.jpg">
+					<img src="images/nav_pic10.jpg" width="170" height="107" alt="" />
+					<span class="ioc"></span>
+				</li>
+
+			</ul>
+		</div>
+		<audio src="music/陈小春-离不开你.mp3" id="music"></audio>
+		<script src="js/jquery-2.1.4.js"></script>
+		<script>
+		   $("#music").get(0).play();
+			$(".click").click(function(e){
+				$(".pic").slideDown();
+				e.stopPropagation();
+			})
+			$(".pic").click(function(e){
+				e.stopPropagation();
+			})
+			$(document).click(function(){
+				$(".pic").slideUp();
+			})
+			$(".pic ul li").click(function(){
+				$(this).addClass("first").siblings().removeClass("first");
+				var imgsrc=$(this).attr("datesrc");
+				$("body").css("background","url('images/"+imgsrc+"')")
+			})
+			
+		</script>
+	</body>
+
+</html>

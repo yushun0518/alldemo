@@ -1,0 +1,438 @@
+/*清零*/
+
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div,
+dl,
+dt,
+dd,
+input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-size: 12px;
+	/*font-family:"宋体";font-family:'Microsoft YaHei';*/
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+select,
+input,
+img {
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: #111;
+}
+
+img {
+	border: none;
+}
+
+
+/*Controls Section*/
+
+#controls-wrapper {
+	margin: 0 auto;
+	height: 62px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+	background: url(../img/nav-bg.png) repeat-x;
+	position: fixed;
+}
+
+#controls {
+	overflow: hidden;
+	height: 100%;
+	text-align: left;
+	z-index: 5;
+	padding: 0 114px;
+	position: relative;
+	/* Increase padding to give thumbnails room */
+}
+
+#slidecounter {
+	float: left;
+	color: #888;
+	font: 23px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: #000 0 -1px 0;
+	margin: 19px 10px 18px 20px;
+}
+
+#slidecaption {
+	overflow: hidden;
+	float: right;
+	color: #FFF;
+	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: #000 0 2px 0;
+	margin: 23px 20px 23px 0;
+}
+
+#navigation {
+	/*float: right;*/
+	margin: 10px 20px 0 0;
+	position: absolute;
+	left: 350px;
+}
+
+
+/*Thumbnail Navigation*/
+
+#nextthumb,
+#prevthumb {
+	z-index: 6;
+	display: none;
+	position: fixed;
+	bottom: 12px;
+	height: 75px;
+	width: 100px;
+	overflow: hidden;
+	background: #ddd;
+	border: 2px solid #fff;
+	-webkit-box-shadow: 0 0 5px #000;
+}
+
+#nextthumb {
+	right: 12px;
+}
+
+#prevthumb {
+	left: 12px;
+}
+
+#nextthumb img,
+#prevthumb img {
+	width: 150px;
+	height: auto;
+}
+
+#nextthumb:active,
+#prevthumb:active {
+	bottom: 10px;
+}
+
+#navigation>:hover,
+#nextthumb:hover,
+#prevthumb:hover {
+	cursor: pointer;
+}
+
+#album {
+	opacity: 0;
+	/*非IE*/
+	filter: alpha(opacity=0);
+	/*IE*/
+}
+
+
+/*------------------------*/
+
+p {
+	padding: 30px;
+	color: #fff;
+	font: 11pt "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	text-shadow: #000 0px 1px 0px;
+	line-height: 200%;
+}
+
+p a {
+	font-size: 10pt;
+	text-decoration: none;
+	outline: none;
+	color: #ddd;
+	background: #222;
+	border-top: 1px solid #333;
+	padding: 5px 8px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0px 1px 1px #000;
+	-webkit-box-shadow: 0px 1px 1px #000;
+	box-shadow: 0px 1px 1px #000;
+}
+
+p a:hover {
+	background-color: #427cb4;
+	border-color: #5c94cb;
+	color: #fff;
+}
+
+h3 {
+	padding: 30px 30px 20px 30px;
+}
+
+#content {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	background: #111;
+	background: rgba(125, 125, 125, 0.50);
+	width: 360px;
+	height: 146px;
+	text-align: left;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	z-index: 99;
+	border-radius: 3px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+#content>p {
+	text-align: center;
+	color: red;
+	font-size: 40px;
+	font-weight: 900;
+	margin-top: -22px;
+	text-shadow: 2px 2px 56px #11f3cb;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+#date {
+	position: absolute;
+	top: 57px;
+	right: -40px;
+	color: #fc3;
+	font-size: 48px;
+	font-family: arial;
+	font-weight: bold;
+	
+}
+
+#date p {
+	position: absolute;
+	top: 0;
+	width: 110px;
+	color: rgba(235, 233, 234, 0.5);
+	font-size: 18px;
+	font-family: arial;
+	font-weight: bold;
+	padding: 30px 0;
+}
+
+#date p span {
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 24px;
+	color: salmon;
+}
+
+#day {
+	right: 266px;
+}
+
+#hour {
+	right: 190px;
+}
+
+#min {
+	right: 94px;
+}
+
+#sec {
+	right: 20px;
+}
+
+.stamp {
+	float: right;
+	margin: 15px 30px 0 0;
+}
+
+
+/*img */
+
+#images {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+}
+
+#images div {
+	float: left;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+}
+
+#images img {
+	margin: 0 auto;
+	display: block;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	/*非IE*/
+	filter: alpha(opacity=0);
+	/*IE*/
+}
+
+
+/*弹出层*/
+
+.layer {
+	width: 676px;
+	height: 406px;
+	margin: 0 auto;
+	position: absolute;
+	background: url(../images/timg.jpg) left top no-repeat;
+	/*background-color:  rgba(0,0,0,0.1);*/
+	z-index: 999999;
+	overflow: hidden;
+	opacity: 1;
+	/*非IE*/
+	filter: alpha(opacity=100);
+	/*IE*/
+}
+
+.layer>div {
+	width: 616px;
+	height: 336px;
+	position: relative;
+	margin-left: 30px;
+	overflow: hidden;
+}
+
+.layer ul {
+	width: 616px;
+	/*margin-left: 30px;*/
+	height: 336px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.layer ul li {
+	width: 616px;
+	height: 336px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.layer ul li .none {
+	opacity: 0;
+}
+
+.layer>span.next, .layer>span.prev {
+	display: inline;
+	width: 24px;
+	height: 36px;
+	position: absolute;
+	top: 178px;
+	cursor: pointer;
+	background: url(../img/button.png);
+}
+.layer .prevB, .layer .nextB {
+	width: 36px;
+	height: 80px;
+	position: absolute;
+	top: 178px;
+	display: none;
+}
+.layer .prevB, .layer .prev {
+	left: 0;
+}
+.layer .nextB {
+	right: 0px;
+}
+.layer .next {
+	right: 0px;
+	background-position: 0 -36px !important;
+}
+
+.layer .prev:hover {
+	background-position: -25px 0;
+}
+
+.layer .next:hover {
+	background-position: -25px -36px !important;
+}
+
+.layer h3 {
+	height: 30px;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+
+.layer h3 a {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	float: right;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	background: url(../img/close.png);
+}
+
+.layer h3>span {
+	line-height: 36px;
+	padding-left: 20px;
+	color: green;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-family: "楷体";
+}
+
+.layer h3>span>span {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.layer h3>span>span #liNo {
+	color: slateblue;
+}
+
+.layer img {
+	margin: 8px;
+	border: #FFF solid 3px;
+	float: left;
+	width: 132px;
+	cursor: pointer;
+	height: 90px;
+	display: block;
+}
+#prevSm:hover{
+	transition: 3s all;
+	transform: scale(1.5);
+}
+.layer img:nth-child(1):hover {
+	transform: scale(1.5);
+}

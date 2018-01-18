@@ -1,0 +1,275 @@
+/* reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dd,
+ul,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+	margin: 0;
+	padding: 0;
+}
+
+em {
+	font-style: normal;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #6c6c6c;
+	transition: 0.5s;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input,
+textarea {
+	outline: none;
+	border: 0;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+body {
+	font-size: 12px;
+	font-family: "宋体";
+	background: #f5f5f5;
+}
+
+div, li, h3, h4, h5, ul, li, a {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*公共*/
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:after {
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+	font-size: 0;
+}
+
+.gradient {
+	background: -moz-linear-gradient(left, #eaeaea, #f4f4f4);
+	background: -webkit-linear-gradient(left, #eaeaea, #f4f4f4);
+	background: -ms-linear-gradient(left, #eaeaea, #f4f4f4);
+	background: linear-gradient(left, #eaeaea, #f4f4f4);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#eaeaea, endColorstr=#f4f4f4)";
+	+background: #f9f9f9;
+}
+
+
+/*头部*/
+.header {
+	width: 100%;
+	height: 120px;
+	background: #fff;
+}
+.inner {
+	width: 1200px;
+	margin: 0 auto;
+}
+.header .logo {
+	width: 100%;
+	height: 120px;
+	background: url(../images/logo.png)no-repeat;
+	background-position-y: 20px;
+	text-align: right;
+}
+.header .logo ul {
+	float: right;
+}
+.header .logo li {
+	width: 122px;
+	height: 120px;
+	padding-top: 40px;
+	line-height: 120px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+.header .logo li a,
+.header .logo li p {
+	height: 30px;
+	color: #222;
+}
+.header .logo li a {
+	display: block;
+	line-height: 30px;
+	font-size: 20px;
+}
+.header .logo li p {
+	line-height: 10px;
+	font-size: 14px;
+}
+.header .logo li.active {
+	background: #ff6933;
+}
+.header .logo li.active a,
+.header .logo li.active p {
+	color: #fff;
+}
+.banner {
+	width: 100%;
+	height: 582px;
+	overflow: hidden;
+}
+.content {
+	width: 100%;
+	background: #e8e8e8;
+}
+.content .order {
+	width: 100%;
+	height: 144px;
+	margin: 16px 0;
+	padding: 36px 26px 22px 20px;
+	background: #fff;
+}
+.content .order li {
+	width: 116px;
+	height: 96px;
+	float: left;
+}
+.content .order li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 156px;
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	color: #010101;
+}
+.content .order li a:hover {
+	color: salmon;
+}
+.content .order li a span {
+	display: block;
+	width: 54px;
+	height: 54px;
+	top: 0;
+	left: 50%;
+	margin-left: -36px;
+	border: 1px solid #ffa787;
+	border-radius: 50%;
+	position: absolute;
+}
+.content .order li a span i {
+	display: block;
+	width: 25px;
+	height: 28px;
+	top: 9px;
+	left: 15px;
+	position: absolute;
+	background: url(../images/main.png);
+}
+.content .order li:nth-child(2) a span i {
+	background-position: 0 -37px;
+}
+.content .order li:nth-child(3) a span i {
+	background-position: 1px -68px;
+}
+.content .order li:nth-child(4) a span i {
+	background-position: 0 -103px;
+}
+.content .order li:nth-child(5) a span i {
+	background-position: 0 -140px;
+}
+.content .order li:nth-child(6) a span i {
+	background-position: 0 -177px;
+}
+.content .order li:nth-child(7) a span i {
+	width: 34px;
+	height: 36px;
+	left: 10px;
+	background-position: 0 -210px;
+}
+.order .o_link a {
+	display: block;
+	width: 222px;
+	height: 62px;
+	line-height: 62px;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	background: #ff6933;
+	font-weight: 600;
+}
+.content .case {
+	width: 100%;
+	height: 476px;
+	background: #fff;
+	padding: 0 30px;
+}
+.content .case h2 {
+	height: 58px;
+	line-height: 58px;
+	font-size: 30px;
+}
+
+.content .case h2 a {
+	color: #ff5112;
+	font-size: 18px;
+	float: right;
+}
+.content .case h2 a:hover {
+	color: slateblue;
+}
+.content .case ul {
+	width: 100%;
+	height: 386px;
+	overflow: hidden;
+}
+.content .case li {
+	width: 25%;
+	height: 386px;
+	float: left;
+}
+.content .case li a,
+.content .case li a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
